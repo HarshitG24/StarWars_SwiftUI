@@ -36,6 +36,7 @@
 		EEB9AB79248294A300AEE781 /* MovieInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB78248294A300AEE781 /* MovieInfoView.swift */; };
 		EEB9AB7B2482A4CA00AEE781 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB7A2482A4CA00AEE781 /* Movie.swift */; };
 		EEB9AB7F2485127900AEE781 /* TrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB7E2485127900AEE781 /* TrailerView.swift */; };
+		EEB9AB812485218500AEE781 /* PlanetName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB802485218500AEE781 /* PlanetName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		EEB9AB78248294A300AEE781 /* MovieInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoView.swift; sourceTree = "<group>"; };
 		EEB9AB7A2482A4CA00AEE781 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EEB9AB7E2485127900AEE781 /* TrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerView.swift; sourceTree = "<group>"; };
+		EEB9AB802485218500AEE781 /* PlanetName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +104,9 @@
 		EE98208B247F8E87009F58CC /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				EE9820A7247FDF14009F58CC /* Data */,
 				EEB9AB71248260DD00AEE781 /* Controller */,
 				EE9820B92480F10F009F58CC /* Fonts */,
-				EE9820A7247FDF14009F58CC /* Data */,
 				EE9820A2247F956F009F58CC /* Model */,
 				EE9820AA247FE286009F58CC /* Views */,
 				EE98208C247F8E87009F58CC /* AppDelegate.swift */,
@@ -139,6 +141,7 @@
 				EE9820BF24815CA9009F58CC /* Species.swift */,
 				EEB9AB6B2482281000AEE781 /* Planet.swift */,
 				EEB9AB7A2482A4CA00AEE781 /* Movie.swift */,
+				EEB9AB802485218500AEE781 /* PlanetName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				EE9820B6248026F2009F58CC /* Homeworld.swift in Sources */,
 				EE9820AC247FE296009F58CC /* HomeView.swift in Sources */,
 				EE98208D247F8E87009F58CC /* AppDelegate.swift in Sources */,
+				EEB9AB812485218500AEE781 /* PlanetName.swift in Sources */,
 				EE9820B224800CC8009F58CC /* StarshipView.swift in Sources */,
 				EEB9AB7B2482A4CA00AEE781 /* Movie.swift in Sources */,
 				EEB9AB79248294A300AEE781 /* MovieInfoView.swift in Sources */,

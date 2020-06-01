@@ -15,8 +15,7 @@ struct SpeciesView: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         ZStack{
-             Image("w3")
-            .resizable()
+            LinearGradient(gradient: .init(colors: [Color(UIColor(red: 0.88, green: 0.44, blue: 0.33, alpha: 1.00)), Color(UIColor(red: 0.98, green: 0.69, blue: 0.63, alpha: 1.00))]), startPoint: .top, endPoint: .bottom)
                 
             .edgesIgnoringSafeArea(.all)
             

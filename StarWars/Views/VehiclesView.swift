@@ -19,9 +19,11 @@ struct VehiclesView: View {
     var body: some View {
         
         ZStack{
-            Image("v1")
-            .resizable()
-            .edgesIgnoringSafeArea(.all)
+//            Image("v1")
+//            .resizable()
+//            .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: .init(colors: [Color(UIColor(red: 0.34, green: 0.35, blue: 0.73, alpha: 1.00)), Color(UIColor(red: 0.60, green: 0.50, blue: 0.98, alpha: 1.00))]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
     VStack{
         HStack{
@@ -72,7 +74,8 @@ struct VehiclesView: View {
             }){
                 Text("Next")
                 } : nil
-        }.padding([.bottom, .horizontal], 20)
+        }.foregroundColor(Color.black)
+        .padding([.bottom, .horizontal], 20)
     }
             
             }.onAppear(perform: loadData)

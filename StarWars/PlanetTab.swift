@@ -20,14 +20,22 @@ struct PlanetTab: View {
                 
                 Color.black
                 VStack{
-           if planetvc.myimages.count == 12{
+           if planetvc.myPlanets.count == 10{
             List{
-                ForEach(0...10, id:\.self){i in
-                    Image(uiImage: self.planetvc.myimages[i])
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .listRowBackground(Color.black)
+                ForEach(0...9, id:\.self){i in
+                    HStack{
+                        Image(uiImage: self.planetvc.myPlanets[i].planetImg!)
+                       .resizable()
+                       .scaledToFit()
+                       .frame(width: 100, height: 100, alignment: .center)
+                       
+                        
+                        Text("\(self.planetvc.myPlanets[i].name)")
+                            .foregroundColor(Color.white)
+                            .font(.system(size: 24))
+                            .fontWeight(.bold)
+                            .padding(.leading, 20)
+                    }.listRowBackground(Color.black)
                     .onTapGesture {
                        self.selectedIndex = i
                        self.sheetDisplayed.toggle()
@@ -44,7 +52,7 @@ struct PlanetTab: View {
             }
             
         }.sheet(isPresented: $sheetDisplayed){
-            PlanetView(img: self.planetvc.myimages[self.selectedIndex], planet: planets[self.selectedIndex])
+            PlanetView(img: self.planetvc.myPlanets[self.selectedIndex].planetImg!, planet: planetHomePage[self.selectedIndex].planet)
         }
     }
 }

@@ -17,9 +17,12 @@ struct StarshipView: View {
     
     var body: some View {
         ZStack{
-            Image("s1")
-            .resizable()
-            .edgesIgnoringSafeArea(.all)
+//            Image("s1")
+//            .resizable()
+//            .edgesIgnoringSafeArea(.all)
+            
+            LinearGradient(gradient: .init(colors: [Color(UIColor(red: 0.51, green: 0.20, blue: 0.44, alpha: 1.00)),Color(UIColor(red: 0.71, green: 0.20, blue: 0.44, alpha: 1.00))]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
         VStack{
             HStack{
@@ -76,7 +79,8 @@ struct StarshipView: View {
                 }){
                     Text("Next")
                     } : nil
-            }.padding([.bottom, .horizontal], 20)
+            }.foregroundColor(Color.black)
+            .padding([.bottom, .horizontal], 20)
         }
             }.onAppear(perform: loadData)
         .navigationBarTitle("", displayMode: .automatic)

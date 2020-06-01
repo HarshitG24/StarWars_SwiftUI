@@ -11,7 +11,8 @@ import UIKit
 import SwiftUI
 
 class PlanetVC: NSObject, ObservableObject{
-    @Published var myimages: [UIImage] = []
+  //  @Published var myimages: [UIImage] = []
+    @Published var myPlanets: [PlanetName] = []
     
     override init() {
         super.init()
@@ -19,7 +20,8 @@ class PlanetVC: NSObject, ObservableObject{
     }
     
     func downloadImages(){
-        for url in imgURL{
+        for i in 0..<planetHomePage.count{
+            let url = planetHomePage[i].imageUrl
             let request = URLRequest(url: URL(string: url)!)
             
             URLSession.shared.dataTask(with: request){data, response, error in
@@ -28,7 +30,9 @@ class PlanetVC: NSObject, ObservableObject{
                 if let myimage = UIImage(data: data){
                     DispatchQueue.main.async {
                         withAnimation {
-                            self.myimages.append(myimage)
+                            planetHomePage[i].planetImg = myimage
+                            self.myPlanets.append(planetHomePage[i])
+                          //  self.myimages.append(myimage)
                         }
                     }
                 }

@@ -22,11 +22,15 @@ struct HomeWorld: View {
     
     var body: some View {
         ZStack{
-            Image("home1")
-            .resizable()
-            .scaledToFill()
-            .edgesIgnoringSafeArea(.all)
-//            LinearGradient(gradient: .init(colors: [.red, .black]), startPoint: .leading, endPoint: .trailing)
+//            Image("home1")
+//            .resizable()
+//            .scaledToFill()
+//            .edgesIgnoringSafeArea(.all)
+            LinearGradient(gradient: .init(colors: [
+             Color(UIColor(red: 0.05, green: 0.10, blue: 0.27, alpha: 1.00)),
+             Color(UIColor(red: 0.32, green: 0.64, blue: 0.84, alpha: 1.00))
+            ]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 HStack{
