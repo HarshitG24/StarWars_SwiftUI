@@ -48,7 +48,7 @@ struct PlanetTab: View {
        }
        .padding(.horizontal, 10)
            .padding(.top, 15)
-           .navigationBarTitle("Planets")
+           .navigationBarTitle("Planets 🌍")
             }
             
         }.sheet(isPresented: $sheetDisplayed){

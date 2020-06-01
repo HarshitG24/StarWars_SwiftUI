@@ -31,16 +31,17 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack{
-//                Image("2")
-//                .resizable()
-//                .edgesIgnoringSafeArea(.all)
-                LinearGradient(gradient: .init(colors: [
-//                    Color(UIColor(red: 0.18, green: 0.04, blue: 0.24, alpha: 1.00)),
-//                    Color(UIColor(red: 0.75, green: 0.27, blue: 0.24, alpha: 1.00)),
-//                    Color(UIColor(red: 0.85, green: 0.57, blue: 0.36, alpha: 1.00))
-                     .blue, .purple
-                ]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all)
+                Image("10")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+//                LinearGradient(gradient: .init(colors: [
+////                    Color(UIColor(red: 0.18, green: 0.04, blue: 0.24, alpha: 1.00)),
+////                    Color(UIColor(red: 0.75, green: 0.27, blue: 0.24, alpha: 1.00)),
+////                    Color(UIColor(red: 0.85, green: 0.57, blue: 0.36, alpha: 1.00))
+//                    // .blue, .purple
+//                    .red, .yellow
+//                ]), startPoint: .top, endPoint: .bottom)
+//                    .edgesIgnoringSafeArea(.all)
                 
                 VStack{
                     Image("title2")
@@ -112,6 +113,8 @@ struct HomeView: View {
                                 .fontWeight(.bold)
                         }
                     }
+                    
+                    Spacer()
                     
                 }.padding(.horizontal, 20)
                 .padding(.bottom, 25)

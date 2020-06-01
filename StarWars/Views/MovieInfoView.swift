@@ -25,8 +25,9 @@ struct MovieInfoView: View {
                     Image(uiImage: self.movieimg!)
                         .resizable()
                         //.scaledToFit()
+                        .aspectRatio(2, contentMode: .fit)
                         .edgesIgnoringSafeArea(.top)
-                        .frame(height: 200, alignment: .topLeading)
+                        //.frame(height: 200, alignment: .topLeading)
                         .background(Color.green)
                         .transition(.opacity)
                     
