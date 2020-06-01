@@ -9,13 +9,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        Text("Hello, World!")
+    
+    init() {
+        UITabBar.appearance().barTintColor = .black
+        UITabBar.appearance().tintColor = .yellow
+        UITabBar.appearance().layer.borderColor = UIColor.clear.cgColor
+        UITabBar.appearance().clipsToBounds = true
     }
+    
+    var body: some View {
+        TabView{
+            HomeView()
+                .tabItem {
+                    Image(systemName: "star.fill")
+                    Text("Star War")
+            }
+            
+            PlanetTab()
+            .tabItem {
+                    Image("p2")
+                        .renderingMode(.template)
+                    Text("Planets")
+                        .foregroundColor(Color.yellow)
+            }
+            
+            MoviesView()
+                .tabItem {
+                    Image(systemName: "film")
+                    Text("Movies")
+            }
+        }.accentColor(.yellow)
+    }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.colorScheme, .dark)
     }
 }
