@@ -38,6 +38,13 @@ struct ContentView: View {
                     Image(systemName: "film")
                     Text("Movies")
             }
+            
+            QuizTab()
+                .tabItem {
+                    Image("test")
+                        .renderingMode(.template)
+                    Text("Quiz")
+            }
         }.accentColor(.yellow)
     }
     

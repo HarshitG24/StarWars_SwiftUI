@@ -37,6 +37,10 @@
 		EEB9AB7B2482A4CA00AEE781 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB7A2482A4CA00AEE781 /* Movie.swift */; };
 		EEB9AB7F2485127900AEE781 /* TrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB7E2485127900AEE781 /* TrailerView.swift */; };
 		EEB9AB812485218500AEE781 /* PlanetName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB802485218500AEE781 /* PlanetName.swift */; };
+		EEB9AB8324867B2F00AEE781 /* QuizTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB8224867B2F00AEE781 /* QuizTab.swift */; };
+		EEB9AB8524867DEB00AEE781 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB8424867DEB00AEE781 /* QuizView.swift */; };
+		EEB9AB8724867F0C00AEE781 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB8624867F0C00AEE781 /* Quiz.swift */; };
+		EEB9AB8924868D0900AEE781 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB9AB8824868D0900AEE781 /* QuizVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		EEB9AB7A2482A4CA00AEE781 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		EEB9AB7E2485127900AEE781 /* TrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerView.swift; sourceTree = "<group>"; };
 		EEB9AB802485218500AEE781 /* PlanetName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetName.swift; sourceTree = "<group>"; };
+		EEB9AB8224867B2F00AEE781 /* QuizTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTab.swift; sourceTree = "<group>"; };
+		EEB9AB8424867DEB00AEE781 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		EEB9AB8624867F0C00AEE781 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		EEB9AB8824868D0900AEE781 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 				EE982094247F8E89009F58CC /* Preview Content */,
 				EE9820A5247F9B1D009F58CC /* HomeWorldView.swift */,
 				EE9820C1248178EB009F58CC /* PlanetTab.swift */,
+				EEB9AB8224867B2F00AEE781 /* QuizTab.swift */,
 			);
 			path = StarWars;
 			sourceTree = "<group>";
@@ -142,6 +151,7 @@
 				EEB9AB6B2482281000AEE781 /* Planet.swift */,
 				EEB9AB7A2482A4CA00AEE781 /* Movie.swift */,
 				EEB9AB802485218500AEE781 /* PlanetName.swift */,
+				EEB9AB8624867F0C00AEE781 /* Quiz.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +176,7 @@
 				EEB9AB742482841400AEE781 /* MoviesView.swift */,
 				EEB9AB78248294A300AEE781 /* MovieInfoView.swift */,
 				EEB9AB7E2485127900AEE781 /* TrailerView.swift */,
+				EEB9AB8424867DEB00AEE781 /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 			children = (
 				EEB9AB72248260EC00AEE781 /* PlanetVC.swift */,
 				EEB9AB7624828F4E00AEE781 /* MovieVC.swift */,
+				EEB9AB8824868D0900AEE781 /* QuizVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,8 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEB9AB7F2485127900AEE781 /* TrailerView.swift in Sources */,
+				EEB9AB8924868D0900AEE781 /* QuizVC.swift in Sources */,
 				EE9820C2248178EB009F58CC /* PlanetTab.swift in Sources */,
 				EE9820B024800CBA009F58CC /* VehiclesView.swift in Sources */,
+				EEB9AB8324867B2F00AEE781 /* QuizTab.swift in Sources */,
 				EEB9AB73248260EC00AEE781 /* PlanetVC.swift in Sources */,
 				EE9820BC2480FFD6009F58CC /* Starship.swift in Sources */,
 				EEB9AB752482841400AEE781 /* MoviesView.swift in Sources */,
@@ -262,6 +276,7 @@
 				EE9820A4247F9582009F58CC /* StarWars.swift in Sources */,
 				EE9820C024815CA9009F58CC /* Species.swift in Sources */,
 				EEB9AB7724828F4E00AEE781 /* MovieVC.swift in Sources */,
+				EEB9AB8724867F0C00AEE781 /* Quiz.swift in Sources */,
 				EE9820B6248026F2009F58CC /* Homeworld.swift in Sources */,
 				EE9820AC247FE296009F58CC /* HomeView.swift in Sources */,
 				EE98208D247F8E87009F58CC /* AppDelegate.swift in Sources */,
@@ -275,6 +290,7 @@
 				EEB9AB702482399000AEE781 /* PlanetView.swift in Sources */,
 				EE9820A6247F9B1D009F58CC /* HomeWorldView.swift in Sources */,
 				EE982091247F8E87009F58CC /* ContentView.swift in Sources */,
+				EEB9AB8524867DEB00AEE781 /* QuizView.swift in Sources */,
 				EE9820A9247FDF21009F58CC /* Data+Constants.swift in Sources */,
 				EE9820B82480DBA6009F58CC /* Vehicles.swift in Sources */,
 			);

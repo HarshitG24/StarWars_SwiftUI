@@ -16,6 +16,7 @@ var COLOR1 = UIColor(red: 0.92, green: 0.23, blue: 0.35, alpha: 1.00)
 var COLOR2 = UIColor(red: 0.98, green: 0.51, blue: 0.19, alpha: 1.00)
 var COLOR3 = UIColor(red: 0.97, green: 0.72, blue: 0.19, alpha: 1.00)
 var COLOR4 = UIColor(red: 0.18, green: 0.60, blue: 0.85, alpha: 1.00)
+var COLOR5 = UIColor(red: 0.11, green: 0.27, blue: 0.41, alpha: 1.00)
 
 var planetHomePage = [
     PlanetName(name: "Tatooine", imageUrl: "https://vignette.wikia.nocookie.net/starwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131019121937", planetImg: nil, planet: planets[0]),
@@ -116,3 +117,45 @@ var moviesData = [
     Movie(name: "The Phantom Menace", duration: "2h 16m", director: "George Lucas", rating: "6.5/10", summary: "Jedi Knights Qui-Gon Jinn and Obi-Wan Kenobi set out to stop the Trade Federation from invading Naboo. While travelling, they come across a gifted boy, Anakin, and learn that the Sith have returned.", releaseDate: "May 19, 1999", imgURL: "https://lumiere-a.akamaihd.net/v1/images/Star-Wars-Phantom-Menace-I-Poster_f5832812.jpeg?region=0%2C250%2C678%2C340", genre: "Sci-fi/Adventure", trailerUrl: "https://www.youtube.com/watch?v=bD7bpG-zDJQ")
 ]
 
+
+var quizQuestions = [
+  Quiz(question: "Which stormtrooper wasn't able to complete his mission in Star Wars: The Force Awakens?", option1: "FN-2705", option2: "FN-2187", option3: "FN-1205", option4: "FN-1312", correctOption: 2),
+  
+  Quiz(question: "What kind of vehicle did Rey live in?", option1: "AT-ST", option2: "Star Destroyer", option3: "Mon Calimari", option4: "AT-AT", correctOption: 4),
+  
+  Quiz(question: "According to Master Yoda, how many Sith are always out there?", option1: "4", option2: "3", option3: "2", option4: "1", correctOption: 4),
+  
+  Quiz(question: "What happened to Anakin Skywalker during the battle with Count Dooku?", option1: "He lost his left leg", option2: "He lost his right arm", option3: "He lost his right leg", option4: "He Lost", correctOption: 2),
+  
+  Quiz(question: "Who played the part of Commander Cody?", option1: "Jay Laga'aia", option2: "Temura Morrison", option3: "Ahmed Best", option4: "Joel Edgerton", correctOption: 2),
+  
+  Quiz(question: "Who killed Jabba?", option1: "Han Solo", option2: "C-3PO", option3: "Luke Skywalker", option4: "Princess Leia", correctOption: 4),
+  
+  Quiz(question: "According to the Emperor, what was Luke Skywalker's weakness?", option1: "His faith in the Light Side of the Force", option2: "His faith in Friends", option3: "His lack of vision", option4: "His resistance to the dark side of force", correctOption: 2),
+  
+  Quiz(question: "Where did the Clone Wars begin?", option1: "Tatooine", option2: "Geonosis", option3: "Naboo", option4: "Coruscant", correctOption: 2),
+  
+  Quiz(question: "What did Jar Jar Binks end up owing Qui-Gon Jinn after being rescued by the same during the invasion of Naboo?", option1: "A trip to otuh Ganga", option2: "A Bongo", option3: "An honor dept", option4: "9000 credits", correctOption: 3),
+  
+  Quiz(question: "What is the color of C-3PO's arm in Star Wars: The Force Awakens?", option1: "Black", option2: "Red", option3: "Blue", option4: "Silver", correctOption: 2),
+  
+  Quiz(question: "Who adopted Padmé Amidala's daughter?", option1: "Bail Organa", option2: "Captain Antilles", option3: "Owen and Beru Lars", option4: "Giddean Danu", correctOption: 1),
+    
+    Quiz(question: "What was the job that Finn told Han Solo he had at Starkiller base?", option1: "Pilot", option2: "Sanitation", option3: "Guard", option4: "Chef", correctOption: 2),
+    
+    Quiz(question: "What name does Obi-Wan go by on Tatooine?", option1: "Ken", option2: "Ben", option3: "Obi", option4: "Wan", correctOption: 2),
+    
+    Quiz(question: "How old was Anakin Skywalker during the battle on Genosis?", option1: "21", option2: "19", option3: "20", option4: "22", correctOption: 3),
+    
+    Quiz(question: "Who freed Princess Leia from her chains at Jabba's palace?", option1: "C-3PO", option2: "Chewbacca", option3: "Luke Skywalker", option4: "RS-D2", correctOption: 4),
+    
+    Quiz(question: "Who fixed the hyperdrive on the Millennium Falcon?", option1: "C-3PO", option2: "R2-D2", option3: "Chewbacca", option4: "Lando Calrissian", correctOption: 2),
+    
+    Quiz(question: "What species was Yoda?", option1: "Unknown", option2: "Trilith", option3: "Yolor", option4: "Yangral", correctOption: 1),
+    
+    Quiz(question: "Which bounty hunter was trying to capture Han Solo when Greedo arrived first?", option1: "Boba Fett", option2: "Danz Borin", option3: "Aurra Sing", option4: "Bossk", correctOption: 2),
+    
+    Quiz(question: "What species is Chewbacca?", option1: "Rodian", option2: "Wookie", option3: "Ewok", option4: "Adednedo", correctOption: 2),
+    
+    Quiz(question: "What did the Ewoks think C-3PO was?", option1: "A friend", option2: "A demon", option3: "A god", option4: "A ghost", correctOption: 3)
+]
