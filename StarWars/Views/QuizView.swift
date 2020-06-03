@@ -58,7 +58,7 @@ struct QuizView: View {
             }.padding(.bottom, 40)
             
         }else{
-            QuizResults(score: "\(self.myScore)/5")
+            QuizResults(score: "\(self.myScore)/5", performance: self.myGrade())
         }
     }
                 
@@ -77,6 +77,29 @@ struct QuizView: View {
             DispatchQueue.main.async {
                 self.ques.append(quizQuestions[Int.random(in: 0..<quizQuestions.count)])
             }
+        }
+    }
+    
+    func myGrade() -> String{
+        let score = self.myScore
+        switch score {
+        case 5:
+            return "Excellent"
+            
+        case 4:
+            return "Good"
+            
+        case 3:
+            return "Satisfactory"
+            
+        case 2:
+            return "Poor"
+            
+        case 1:
+            return "Fail"
+            
+        default:
+            return "Fail"
         }
     }
 }
@@ -212,6 +235,7 @@ struct OptionAns: View {
 
 struct QuizResults: View {
     var score: String
+    var performance: String
     var body: some View {
         VStack{
             Text("Quiz Results")
@@ -240,6 +264,12 @@ struct QuizResults: View {
                 .foregroundColor(Color.green)
                 .font(.system(size: 22))
                 .fontWeight(.bold)
+            
+            Text("Your quiz performance is: \(performance)")
+                .foregroundColor(Color.white)
+                .font(.system(size: 20))
+                .fontWeight(.medium)
+                .padding(.top, 20)
             
             //Spacer()
         }

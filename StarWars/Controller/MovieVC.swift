@@ -19,20 +19,22 @@ class MovieVC: NSObject, ObservableObject{
     }
     
     func loadImages(){
-        for url in swMovies{
-            let request = URLRequest(url: URL(string: url)!)
-            
-            URLSession.shared.dataTask(with: request){data, response, error in
-                guard let data = data else {return}
+        DispatchQueue.global().async {
+            for url in swMovies{
+                let request = URLRequest(url: URL(string: url)!)
                 
-                if let myimage = UIImage(data: data){
-                    DispatchQueue.main.async {
-                        withAnimation {
-                            self.movieimg.append(myimage)
+                URLSession.shared.dataTask(with: request){data, response, error in
+                    guard let data = data else {return}
+                    
+                    if let myimage = UIImage(data: data){
+                        DispatchQueue.main.async {
+                            withAnimation {
+                                self.movieimg.append(myimage)
+                            }
                         }
                     }
-                }
-            }.resume()
+                }.resume()
+            }
         }
     }
 }

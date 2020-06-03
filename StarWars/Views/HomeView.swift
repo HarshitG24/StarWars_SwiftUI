@@ -188,15 +188,16 @@ struct BioTxt: View {
     var body: some View {
         HStack {
             Text(name)
-                .font(.system(size: 24))
-                .fontWeight(.bold)
-                .padding(.top, 10)
+//                .font(.system(size: 24))
+//                .fontWeight(.bold)
+                .padding(.top, 20)
             Spacer()
             Text(value)
-                .font(.system(size: 18))
-                .fontWeight(.medium)
-            .padding(.top, 10)
-        }.foregroundColor(Color.white)
+//                .font(.system(size: 18))
+//                .fontWeight(.medium)
+            .padding(.top, 20)
+        }.font(.custom("Starjedi", size: 17))
+        .foregroundColor(Color.white)
         .padding(.horizontal, 40)
     }
 }

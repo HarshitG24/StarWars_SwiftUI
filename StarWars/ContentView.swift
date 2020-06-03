@@ -41,7 +41,7 @@ struct ContentView: View {
             
             QuizTab()
                 .tabItem {
-                    Image("test")
+                    Image("quiz2")
                         .renderingMode(.template)
                     Text("Quiz")
             }
