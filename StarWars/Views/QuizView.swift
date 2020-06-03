@@ -45,6 +45,7 @@ struct QuizView: View {
             Spacer()
             Button(action:{
                 self.count += 1
+             //   self.checkAnswer()
                 self.btnselected = 5
             }){
                 ZStack {
@@ -79,6 +80,14 @@ struct QuizView: View {
             }
         }
     }
+    
+//    func checkAnswer(){
+//        if self.count != 5{
+//            if self.btnselected == self.ques[self.count].correctOption{
+//                self.myScore += 1
+//            }
+//        }
+//    }
     
     func myGrade() -> String{
         let score = self.myScore
