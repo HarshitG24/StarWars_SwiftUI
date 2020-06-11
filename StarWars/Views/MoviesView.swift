@@ -7,29 +7,16 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MoviesView: View {
-//       init() {
-//
-//           UINavigationBar.appearance().backgroundColor = .black
-//
-//            UINavigationBar.appearance().largeTitleTextAttributes = [
-//               .foregroundColor: UIColor(red: 1.00, green: 1.00, blue: 1.00, alpha: 1.00),
-//               .font : UIFont(name:"Rockwell-Bold", size: 40)!
-//           ]
-//
-//       }
-    
-    @ObservedObject var movie = MovieVC()
     var body: some View {
         
         NavigationView{
             ZStack {
                 Color(UIColor(red: 0.11, green: 0.13, blue: 0.19, alpha: 1.00))
                     .edgesIgnoringSafeArea(.all)
-              //  Color.white
-                
-
+    
         VStack{
             HStack{
                 Text("Movies")
@@ -38,22 +25,20 @@ struct MoviesView: View {
                 Spacer()
             }
             
-            if self.movie.movieimg.count == swMovies.count{
              List{
                 Section{
-                    ForEach(0..<swMovies.count, id: \.self){i in
+                    ForEach(0..<moviesData.count, id: \.self){i in
                     
                         
                      NavigationLink(destination: MovieInfoView(movie: moviesData[i])) {
                          
-                        MovieRow(movie: moviesData[i], img: self.movie.movieimg[i])
+                        MovieRow(movie: moviesData[i])
                      }.listRowBackground(Color(UIColor(red: 0.11, green: 0.13, blue: 0.19, alpha: 1.00)))
                                 
                 }
                 }
                 
              }.rotationEffect(Angle(degrees: 360)).animation(.easeIn)
-    }
             
             Spacer()
         }.padding([.horizontal, .top], 20)
@@ -72,15 +57,13 @@ struct MoviesView_Previews: PreviewProvider {
 
 struct MovieRow: View {
     var movie: Movie
-    var img: UIImage
     var body: some View {
         HStack {
-            Image(uiImage: img)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 150, alignment: .center)
-                .cornerRadius(10)
-            
+            WebImage(url: URL(string: movie.posterUrl))
+                .onSuccess(){ image, data, cacheType in
+
+            }.resizable()
+            .frame(width: 100, height: 140, alignment: .center)
             
             VStack{
                 HStack {

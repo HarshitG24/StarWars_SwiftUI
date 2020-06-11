@@ -74,9 +74,12 @@ struct QuizView: View {
     }
     
     func downloadQuestion(){
+        var arr = quizQuestions
         for _ in 0...4{
+            let random = Int.random(in: 0..<arr.count-1)
             DispatchQueue.main.async {
-                self.ques.append(quizQuestions[Int.random(in: 0..<quizQuestions.count)])
+                self.ques.append(arr[random])
+                arr.remove(at: random)
             }
         }
     }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Planet {
+struct Planet: Identifiable, Hashable {
+    var id = UUID()
     var name: String
     var description: String
     var suns: Int
@@ -17,4 +18,5 @@ struct Planet {
     var orbital_period: Int
     var climate: String
     var atmosphere: String
+    var imgURL: String
 }

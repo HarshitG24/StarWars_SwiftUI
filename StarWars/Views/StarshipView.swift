@@ -79,7 +79,7 @@ struct StarshipView: View {
                 }){
                     Text("Next")
                     } : nil
-            }.foregroundColor(Color.black)
+            }.foregroundColor(Color.white)
             .padding([.bottom, .horizontal], 20)
         }
             }.onAppear(perform: loadData)
