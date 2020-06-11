@@ -63,31 +63,34 @@ struct HomeView: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 5)
                         .fill(Color.black)
-                        .frame(width: UIScreen.main.bounds.width-60, height: 50, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width-60, height: 65, alignment: .center)
                     
                     HStack{
                         
                         NavigationLink(destination: HomeWorld(homeworld: self.starwar?.homeworld)) {
-                            ImageDisplayer(name: "home", imgColor: true)
+                          
+                            ImageDisplayer(name: "home", imgColor: true, title: "Homeworld")
+                               
+                            
                         }
                         
                         Spacer()
                         
                        
                         NavigationLink(destination: VehiclesView(vehicles: self.vehicles)) {
-                            ImageDisplayer(name: "vehicles", imgColor: self.vehicles.count > 0 ? true : false)
+                            ImageDisplayer(name: "vehicles", imgColor: self.vehicles.count > 0 ? true : false, title: "Vehicles")
                         } .disabled(self.vehicles.count > 0 ? false : true)
                         
                         Spacer()
                         
                         NavigationLink(destination: StarshipView(starshipURL: self.starships)) {
-                            ImageDisplayer(name: "starships", imgColor: self.starships.count > 0 ? true : false)
+                            ImageDisplayer(name: "starships", imgColor: self.starships.count > 0 ? true : false, title: "Starships")
                         }.disabled(self.starships.count > 0 ? false : true)
                         
                         Spacer()
                         
                         NavigationLink(destination: SpeciesView(speciesURL: self.species)) {
-                            ImageDisplayer(name: "avatar3", imgColor: self.species.count > 0 ? true : false)
+                            ImageDisplayer(name: "avatar3", imgColor: self.species.count > 0 ? true : false, title: "Species")
                         }.disabled(self.species.count > 0 ? false : true)
                         
                     }.padding(.horizontal, 60)
@@ -168,8 +171,8 @@ struct BioData: View {
                 DetailBox()
                 VStack{
                     BioTxt(name: "Name:", value: self.starwar.name)
-                    BioTxt(name: "Height:", value: self.starwar.height)
-                    BioTxt(name: "Mass:", value: self.starwar.mass)
+                    BioTxt(name: "Height:", value: "\(self.starwar.height) cm")
+                    BioTxt(name: "Mass:", value: "\(self.starwar.mass) kg")
                     BioTxt(name: "Gender:", value: self.starwar.gender)
                 }
             }.background(Color.clear)
@@ -188,15 +191,16 @@ struct BioTxt: View {
     var body: some View {
         HStack {
             Text(name)
-                .font(.system(size: 24))
-                .fontWeight(.bold)
-                .padding(.top, 10)
+//                .font(.system(size: 24))
+//                .fontWeight(.bold)
+                .padding(.top, 20)
             Spacer()
             Text(value)
-                .font(.system(size: 18))
-                .fontWeight(.medium)
-            .padding(.top, 10)
-        }.foregroundColor(Color.white)
+//                .font(.system(size: 18))
+//                .fontWeight(.medium)
+            .padding(.top, 20)
+        }.font(.custom("Starjedi", size: 17))
+        .foregroundColor(Color.white)
         .padding(.horizontal, 40)
     }
 }
@@ -240,12 +244,19 @@ struct DetailBox: View {
 struct ImageDisplayer: View {
     var name: String
     var imgColor: Bool
+    var title: String
     var body: some View {
-        Image(name)
-            .resizable()
-//            .renderingMode(.original)
-            .foregroundColor(imgColor == true ? Color.yellow : Color.gray)
-            .frame(width: 30, height: 30, alignment: .center)
+        VStack {
+            Image(name)
+                .resizable()
+    //            .renderingMode(.original)
+                .foregroundColor(imgColor == true ? Color.yellow : Color.gray)
+                .frame(width: 30, height: 30, alignment: .center)
+            
+            Text(title)
+               .font(.system(size: 10))
+               .foregroundColor(Color.white)
+        }
     }
 }
 

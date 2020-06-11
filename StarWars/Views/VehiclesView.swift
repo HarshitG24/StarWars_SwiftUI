@@ -74,7 +74,7 @@ struct VehiclesView: View {
             }){
                 Text("Next")
                 } : nil
-        }.foregroundColor(Color.black)
+        }.foregroundColor(Color.white)
         .padding([.bottom, .horizontal], 20)
     }
             

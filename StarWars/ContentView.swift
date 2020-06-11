@@ -25,18 +25,25 @@ struct ContentView: View {
                     Text("Star War")
             }
             
-            PlanetTab()
-            .tabItem {
-                    Image("p2")
-                        .renderingMode(.template)
-                    Text("Planets")
-                        .foregroundColor(Color.yellow)
-            }
+//            PlanetTab()
+//            .tabItem {
+//                    Image("p2")
+//                        .renderingMode(.template)
+//                    Text("Planets")
+//                        .foregroundColor(Color.yellow)
+//            }
             
             MoviesView()
                 .tabItem {
                     Image(systemName: "film")
                     Text("Movies")
+            }
+            
+            QuizTab()
+                .tabItem {
+                    Image("quiz2")
+                        .renderingMode(.template)
+                    Text("Quiz")
             }
         }.accentColor(.yellow)
     }

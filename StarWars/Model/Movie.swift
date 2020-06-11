@@ -18,4 +18,5 @@ struct Movie {
     var imgURL: String
     var genre: String
     var trailerUrl: String
+    var posterUrl: String
 }

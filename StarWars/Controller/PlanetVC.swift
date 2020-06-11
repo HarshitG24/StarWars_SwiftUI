@@ -16,27 +16,27 @@ class PlanetVC: NSObject, ObservableObject{
     
     override init() {
         super.init()
-        self.downloadImages()
+       // self.downloadImages()
     }
     
-    func downloadImages(){
-        for i in 0..<planetHomePage.count{
-            let url = planetHomePage[i].imageUrl
-            let request = URLRequest(url: URL(string: url)!)
-            
-            URLSession.shared.dataTask(with: request){data, response, error in
-                guard let data = data else {return}
-                
-                if let myimage = UIImage(data: data){
-                    DispatchQueue.main.async {
-                        withAnimation {
-                            planetHomePage[i].planetImg = myimage
-                            self.myPlanets.append(planetHomePage[i])
-                          //  self.myimages.append(myimage)
-                        }
-                    }
-                }
-            }.resume()
-        }
-    }
+//    func downloadImages(){
+//        for i in 0..<planetHomePage.count{
+//            let url = planetHomePage[i].imageUrl
+//            let request = URLRequest(url: URL(string: url)!)
+//
+//            URLSession.shared.dataTask(with: request){data, response, error in
+//                guard let data = data else {return}
+//
+//                if let myimage = UIImage(data: data){
+//                    DispatchQueue.main.async {
+//                        withAnimation {
+//                            planetHomePage[i].planetImg = myimage
+//                            self.myPlanets.append(planetHomePage[i])
+//                          //  self.myimages.append(myimage)
+//                        }
+//                    }
+//                }
+//            }.resume()
+//        }
+//    }
 }

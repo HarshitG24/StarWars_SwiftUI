@@ -57,7 +57,7 @@ struct HomeWorld: View {
                     ZStack{
                        RoundedRectangle(cornerRadius: 5)
                        .fill(Color.black)
-                       .frame(width: UIScreen.main.bounds.width - 60 ,height: 300)
+                       .frame(width: UIScreen.main.bounds.width - 60 ,height: 320)
                        .opacity(0.8)
                        // .border(Color.red)
                        .padding(.horizontal, 20)
